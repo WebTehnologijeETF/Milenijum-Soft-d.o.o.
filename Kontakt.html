@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="ba">
+    <meta charset="UTF-8">
+    <title>Milenijum-Soft d.o.o. | Kontakt</title>
+    <link href="stil.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="forma">
+    <header>
+        <a href="index.html">
+            <p id="logo">Milenijum-Soft<br><span id="slogan">Softver po mjeri korisnika</span></p>
+            <img id="logoSlika" src="logo1.png" alt="Logo kompanije Milenijum-Soft. Softver po mjeri korisnika">
+        </a>
+        <nav>
+            <ul id="meni">
+                <li><a href="index.html">Naslovna</a></li>
+                <li><a href="Proizvodi.html">Proizvodi</a></li>
+                <li><a href="O%20nama.html">O nama</a></li>
+                <li><a href="Reference.html">Reference</a></li>
+                <li><a href="Kontakt.html">Kontakt</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="kontakt-main">
+        <h2 class="podnaslov">Unesite podatke i kontaktirajte nas</h2>
+        <form action="kontakt.php" method="post">
+            <table id="kontakt-tabela">
+                <tr>
+                    <td>
+                        Ime:
+                    </td>
+                    <td>
+                        <input id="ime" name="ime" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mail:
+                    </td>
+                    <td>
+                        <input id="mail" name="mail" type="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td id="poruka-tekst">
+                        Poruka:
+                    </td>
+                    <td>
+                        <textarea id="poruka" name="poruka"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input id="posalji" type="submit" value="Pošalji">
+                    </td>
+                </tr>
+            </table>
+        </form><br><br>
+        <p>Enrique Iglesias - Bailando</p>
+        <audio controls>
+            <source src="pjesma.mp3" type="audio/mpeg">
+        </audio>
+        <iframe id="video" width="720" height="490" src="https://www.youtube.com/embed/2nztIcqZwoA"></iframe>
+        <details>
+            <summary>Detalji o videu</summary>
+            <p>Video možete pogledati i na youtube.com tako što pratite <a href="https://www.youtube.com/watch?v=2nztIcqZwoA">ovaj</a> link.</p>
+        </details>
+    </main>
+    <footer id="referenceFooter">
+        &copy; 2015 Milenijum-Soft d.o.o. Sarajevo
+    </footer>
+</div>
+</body>
+</html>

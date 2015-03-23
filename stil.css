@@ -1,0 +1,328 @@
+@import url(http://fonts.googleapis.com/css?family=Cinzel+Decorative);
+
+#meni {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+header {
+    margin-top: 30px;
+}
+#logo {
+    float: left;
+    width: 200px;
+    height: 50px;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 17pt;
+    position: relative;
+    top: 40px;
+}
+#slogan {
+    font-size: 10pt;
+    float: left;
+    width: 210px;
+    position: relative;
+    left: -5px;
+}
+#logoSlika {
+    width: 100px;
+    height: 40px;
+    float: left;
+    position: relative;
+    left: -150px;
+    top: 20px;
+}
+#slide {
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+#meni > li {
+    display: inline;
+    float: left;
+    padding-left: 15px;
+}
+#meni > li > a {
+    display: block;
+    width: 80px;
+    height: 25px;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 5px;
+    font-size: large;
+    color: #F04C40;
+    border-top-width: 5px;
+    border-color: #0193B7;
+    border-top-style: solid;
+}
+#meni > li > a:hover {
+    color: white;
+    background-color: #0193B7;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+}
+nav {
+    float: right;
+}
+body {
+    background-color: #F4F4F4;
+}
+#forma {
+    width: 720px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.novost > img {
+    float: right;
+    width: 380px;
+    height: 150px;
+    min-height: 150px;
+}
+.novostiTekst {
+    width: 280px;
+    height: 130px;
+    float: left;
+    word-wrap: break-word;
+    max-width: 300px;
+    overflow: hidden;
+    padding-left: 15px;
+}
+.novostiTekst > h3 {
+    position: relative;
+    top: -30px;
+}
+.zlato {
+    width: 720px;
+    height: 5px;
+    background-color: #0193B7;
+    float: right;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.headerzlato {
+    width: 720px;
+    height: 15px;
+    background-color: #0193B7;
+    float: right;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+#novosti {
+    border: 3px solid #0193B7;
+    height: 500px;
+    width: 714px;
+    overflow: auto;
+}
+.plavobijelo {
+    position: relative;
+    top: 20px;
+    background-color: #0193B7;
+    color: white;
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
+}
+.vise {
+    text-decoration: none;
+    background-color: #0193B7;
+    color: white;
+    padding: 5px;
+    position: relative;
+    top: -40px;
+    left: 170px;
+}
+.novost:hover {
+    color: #0193B7;
+}
+.novost:last-of-type .zlato {
+    height: 0px;
+}
+.novostiTekst > p {
+    font-size: 12px;
+}
+footer {
+    background-color: #0193B7;
+    color: white;
+    margin-top: 60px;
+    padding: 5px 0px 5px 0px;
+    width: 720px;
+    text-align: center;
+}
+#referenceMain {
+    float: left;
+    width: 720px;
+}
+#referenca > img {
+    width: 300px;
+    height: 100px;
+    float: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#referencaTekst {
+    background-color: #0193B7;
+    color:white;
+    width: 280px;
+    height: 80px;
+    float: right;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#referencaNaslov {
+    background-color: #F04C40;
+    color: white;
+    width: 100px;
+    height: 80px;
+    float: right;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#referenceMain > h2 {
+     background-color: #0193B7;
+     color: white;
+     width: 720px;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     text-align: center;
+     margin-top: 40px;
+     margin-bottom: 30px;
+ }
+#stranac {
+    color:#F04C40;
+}
+#referenceFooter {
+    float: left;
+    margin-bottom: 10px;
+}
+#referenceMain > ul {
+    list-style-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTYXkOfqbDLG3fEfN4dOza_J6cRnIxC1Y_w3tTwmU2r65B_seC9");
+}
+#referenceMain > ul > li > a{
+     text-decoration: none;
+     color: #0193B7;
+ }
+#referenceMain > ul > li > a:hover{
+    color: #F04C40;
+}
+#kontakt-main {
+    float: left;
+    width: 720px;
+    margin-top: 50px;
+}
+.podnaslov {
+    width: 720px;
+    text-align: center;
+    padding: 5px 0 5px 0;
+    background-color: #0193B7;
+    color: white;
+}
+#posalji {
+    background-color: #0193B7;
+    width: 120px;
+    height: 40px;
+    color: white;
+    font-size: medium;
+}
+#kontakt-tabela {
+    width: 720px;
+    margin-left: 100px;
+}
+#poruka {
+    width: 400px;
+    height: 150px;
+}
+#poruka-tekst {
+    vertical-align: top;
+}
+#mail {
+     width: 400px;
+ }
+#ime {
+    width: 400px;
+}
+#video {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+#proizvodi-main {
+    float:left;
+    width: 720px;
+    margin-top: 50px;
+}
+#proizvodi-main > div {
+    float:left;
+    overflow: hidden;
+    height: 150px;
+    width: 200px;
+    margin: 10px 20px 10px 20px;
+ }
+#proizvodi-main > div > p {
+    z-index: auto;
+    color:transparent;
+    padding: 10px;
+    visibility: visible;
+    position: relative;
+    top:-120px;
+    height: 80px;
+    width: 200px;
+}
+#proizvodi-main > div > h3 {
+    position: relative;
+    top:-135px;
+}
+#proizvodi-main > div > p:hover {
+    visibility: visible;
+    background-color: #0193B7;
+    color: white;
+}
+.kol2 {
+    margin: 0 20px 0 20px;
+}
+#tabela tr td, #tabela tr th{
+    border: 2px solid #0193B7;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #0193B7;
+    color:white;
+}
+#tabela tr th {
+    background-color: transparent;
+    border-color: transparent;
+    color: #F04C40;
+}
+#tabela {
+    width: 720px;
+}
+#o-nama-main {
+    float: left;
+    width:720px;
+    margin-top: 50px;
+    font-size: large;
+    text-align: justify;
+}
+#slika1 {
+    float: right;
+    padding: 0 0 10px 10px;
+}
+#informacije > p {
+    border:5px solid #0193B7;
+    font-size: medium;
+    text-align: left;
+    padding: 10px;
+    position: relative;
+    top: -25px;
+    border-top-color: #F04C40;
+    background-color: #0193B7;
+    color:white;
+}
+iframe {
+    frameborder: 0;
+}
+.brojevi {
+    font-size: 20pt;
+    text-decoration: solid;
+    font-style: italic;
+    text-align: center;
+}
