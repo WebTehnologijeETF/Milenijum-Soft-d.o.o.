@@ -152,14 +152,14 @@ footer {
     float: left;
     width: 720px;
 }
-#referenca > img {
+.referenca > img {
     width: 300px;
     height: 100px;
     float: left;
     margin-bottom: 10px;
     margin-top: 10px;
 }
-#referencaTekst {
+.referencaTekst {
     background-color: #0193B7;
     color:white;
     width: 280px;
@@ -169,7 +169,7 @@ footer {
     margin-bottom: 10px;
     margin-top: 10px;
 }
-#referencaNaslov {
+.referencaNaslov {
     background-color: #F04C40;
     color: white;
     width: 100px;
@@ -316,9 +316,6 @@ footer {
     border-top-color: #F04C40;
     background-color: #0193B7;
     color:white;
-}
-iframe {
-    frameborder: 0;
 }
 .brojevi {
     font-size: 20pt;
