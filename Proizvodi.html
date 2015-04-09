@@ -3,19 +3,34 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Milenijum-Soft d.o.o. | Proizvodi</title>
-    <link href="stil.css" rel="stylesheet" type="text/css">
+    <link href="ostalo/stil.css" rel="stylesheet" type="text/css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+    <script src="skripte/jquery-2.1.3.js"></script>
 </head>
 <body>
 <div id="forma">
     <header>
         <a href="index.html">
             <p id="logo">Milenijum-Soft<br><span id="slogan">Softver po mjeri korisnika</span></p>
-            <img id="logoSlika" src="logo1.png" alt="Logo kompanije Milenijum-Soft. Softver po mjeri korisnika">
+            <img id="logoSlika" src="slike/logo1.png" alt="Logo kompanije Milenijum-Soft. Softver po mjeri korisnika">
         </a>
         <nav>
+            <div id="pomocniDiv"></div>
+            <div id="pomocniDivDva"></div>
             <ul id="meni">
                 <li><a href="index.html">Naslovna</a></li>
-                <li><a href="Proizvodi.html">Proizvodi</a></li>
+                <li id="proizvodi"><a>Proizvodi</a></li>
+                <li>
+                    <div id="podmeni">
+                        <ul>
+                            <li><a href="Proizvodi.html">Finansijsko poslovanje</a></li>
+                            <li><a href="Proizvodi.html">Robno poslovanje</a></li>
+                            <li><a href="Proizvodi.html">Plate uposlenih</a></li>
+                            <li><a href="Proizvodi.html">Stalna sredstva</a></li>
+                            <li><a href="Proizvodi.html">Ostali proizvodi</a></li>
+                        </ul>
+                    </div>
+                </li>
                 <li><a href="O%20nama.html">O nama</a></li>
                 <li><a href="Reference.html">Reference</a></li>
                 <li><a href="Kontakt.html">Kontakt</a> </li>
@@ -25,27 +40,27 @@
     <main id="proizvodi-main">
         <h2 class="podnaslov">Proizvodi</h2>
         <div class="kol1">
-            <img src="pro1.jpg" width="200" height="100" alt="Proizvod kompanije.">
+            <img src="slike/pro1.jpg" width="200" height="100" alt="Proizvod kompanije.">
             <p>Realizacija softvera za <br> potrebe sektora finansija.</p>
             <h3>Finansijsko poslovanje</h3>
         </div>
         <div class="kol2">
-            <img src="pro2.jpg" width="200" height="100" alt="Proizvod kompanije.">
+            <img src="slike/pro2.jpg" width="200" height="100" alt="Proizvod kompanije.">
             <p>Veleprodaja i/ili maloprodaja.</p>
             <h3>Robno poslovanje</h3>
         </div>
         <div class="kol3">
-            <img src="pro3.jpg" width="200" height="100" alt="Proizvod kompanije.">
+            <img src="slike/pro3.jpg" width="200" height="100" alt="Proizvod kompanije.">
             <p>Uključujući i MIP&amp;GIP obrasce.</p>
             <h3>Plate uposlenih</h3>
         </div>
         <div class="kol1">
-            <img src="pro4.jpg" width="200" height="100" alt="Proizvod kompanije.">
+            <img src="slike/pro4.jpg" width="200" height="100" alt="Proizvod kompanije.">
             <p>Omogućeni modaliteti obračuna prema potrebama korisnika.</p>
             <h3>Stalna sredstva</h3>
         </div>
         <div class="kol2">
-            <img src="pro5.jpg" width="200" height="100" alt="Proizvod kompanije.">
+            <img src="slike/pro5.jpg" width="200" height="100" alt="Proizvod kompanije.">
             <p>Fakturisanje usluga, Transfer podataka, Analiza poslovanja</p>
             <h3>Ostali proizvodi</h3>
         </div>
@@ -89,5 +104,7 @@
         &copy; 2015 Milenijum-Soft d.o.o. Sarajevo
     </footer>
 </div>
+
+<script src="skripte/podmeni.js"></script>
 </body>
 </html>

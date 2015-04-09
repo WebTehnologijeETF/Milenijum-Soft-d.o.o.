@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Cinzel+Decorative);
+/*@import url(http://fonts.googleapis.com/css?family=Cinzel+Decorative);*/
 
 #meni {
     list-style-type: none;
@@ -13,7 +13,7 @@ header {
     float: left;
     width: 200px;
     height: 50px;
-    font-family: 'Cinzel Decorative', cursive;
+    /*font-family: 'Cinzel Decorative', cursive;*/
     font-size: 17pt;
     position: relative;
     top: 40px;
@@ -35,7 +35,7 @@ header {
 }
 #slide {
     margin-top: 40px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 #meni > li {
     display: inline;
@@ -135,7 +135,7 @@ body {
     color: #0193B7;
 }
 .novost:last-of-type .zlato {
-    height: 0px;
+    height: 0;
 }
 .novostiTekst > p {
     font-size: 12px;
@@ -144,7 +144,7 @@ footer {
     background-color: #0193B7;
     color: white;
     margin-top: 60px;
-    padding: 5px 0px 5px 0px;
+    padding: 5px 0 5px 0;
     width: 720px;
     text-align: center;
 }
@@ -206,6 +206,9 @@ footer {
 #referenceMain > ul > li > a:hover{
     color: #F04C40;
 }
+
+/*******************                   CSS kontakt forma                       ***************************/
+
 #kontakt-main {
     float: left;
     width: 720px;
@@ -223,29 +226,48 @@ footer {
     width: 120px;
     height: 40px;
     color: white;
+    border: none;
+    border-radius: 10px;
     font-size: medium;
 }
 #kontakt-tabela {
     width: 720px;
-    margin-left: 100px;
+    margin-left: 20px;
 }
 #poruka {
-    width: 400px;
+    width: 300px;
     height: 150px;
+    border-radius: 5px;
 }
 #poruka-tekst {
     vertical-align: top;
 }
-#mail {
-     width: 400px;
- }
-#ime {
-    width: 400px;
+#ime, #mail, #state, #country {
+    width: 300px;
+    border-radius: 5px;
 }
 #video {
     margin-top: 40px;
     margin-bottom: 30px;
 }
+.error {
+    color: white;
+    background-color: red;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+    height: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 30px;
+}
+.naziv {
+    width: 80px;
+    text-align: right;
+}
+
+
+
 #proizvodi-main {
     float:left;
     width: 720px;
@@ -322,4 +344,49 @@ footer {
     text-decoration: solid;
     font-style: italic;
     text-align: center;
+}
+
+/***   CSS za podmeni   ***/
+#podmeni {
+    display: none;
+    position: absolute;
+    width: 235px;
+}
+#podmeni > ul {
+    list-style: none;
+}
+#podmeni > ul > li {
+    padding: 10px;
+    margin: 5px;
+    background-color: #0193B7;
+    position: relative;
+    left: -20px;
+}
+#podmeni > ul > li > a {
+    text-decoration: none;
+    color: white;
+}
+#podmeni > ul > li:hover {
+    background-color: #F04C40;
+}
+#pomocniDiv {
+    background-color: #0193B7;
+    height: 40px;
+    width: 0;
+    position: absolute;
+}
+#pomocniDivDva {
+    background-color: #0193B7;
+    height: 5px;
+    width: 95px;
+    position: absolute;
+    display: none;
+}
+
+
+details summary {
+    cursor: pointer;
+}
+li#proizvodi {
+   cursor: pointer;
 }

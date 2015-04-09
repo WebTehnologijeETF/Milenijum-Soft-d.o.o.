@@ -3,19 +3,34 @@
 <head lang="ba">
     <meta charset="UTF-8">
     <title>Milenijum-Soft d.o.o. | Referece</title>
-    <link href="stil.css" rel="stylesheet" type="text/css">
+    <link href="ostalo/stil.css" rel="stylesheet" type="text/css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+    <script src="skripte/jquery-2.1.3.js"></script>
 </head>
 <body>
 <div id="forma">
     <header>
         <a href="index.html">
             <p id="logo">Milenijum-Soft<br><span id="slogan">Softver po mjeri korisnika</span></p>
-            <img id="logoSlika" src="logo1.png" alt="Logo kompanije Milenijum-Soft. Softver po mjeri korisnika">
+            <img id="logoSlika" src="slike/logo1.png" alt="Logo kompanije Milenijum-Soft. Softver po mjeri korisnika">
         </a>
         <nav>
+            <div id="pomocniDiv"></div>
+            <div id="pomocniDivDva"></div>
             <ul id="meni">
                 <li><a href="index.html">Naslovna</a></li>
-                <li><a href="Proizvodi.html">Proizvodi</a></li>
+                <li id="proizvodi"><a>Proizvodi</a></li>
+                <li>
+                    <div id="podmeni">
+                        <ul>
+                            <li><a href="Proizvodi.html">Finansijsko poslovanje</a></li>
+                            <li><a href="Proizvodi.html">Robno poslovanje</a></li>
+                            <li><a href="Proizvodi.html">Plate uposlenih</a></li>
+                            <li><a href="Proizvodi.html">Stalna sredstva</a></li>
+                            <li><a href="Proizvodi.html">Ostali proizvodi</a></li>
+                        </ul>
+                    </div>
+                </li>
                 <li><a href="O%20nama.html">O nama</a></li>
                 <li><a href="Reference.html">Reference</a></li>
                 <li><a href="Kontakt.html">Kontakt</a> </li>
@@ -27,7 +42,7 @@
 
         <a href="http://www.komel.ba">
             <div class="referenca">
-                <img src="ref1.jpg" alt="Referenca kompanije.">
+                <img src="slike/ref1.jpg" alt="Referenca kompanije.">
                 <div class="referencaTekst">
                     Komel je preduzeće za proizvodnju, trgovinu i usluge.
                 </div>
@@ -39,7 +54,7 @@
 
         <a href="http://www.interex.ba">
             <div class="referenca">
-                <img src="ref2.jpg" alt="Referenca kompanije.">
+                <img src="slike/ref2.jpg" alt="Referenca kompanije.">
                 <div class="referencaTekst">
                     Interex je preduzeće za trgovinu sa većinskim stranim kapitalom.
                 </div>
@@ -51,7 +66,7 @@
 
         <a href="#">
             <div class="referenca">
-                <img src="ref3.jpg" alt="Referenca kompanije.">
+                <img src="slike/ref3.jpg" alt="Referenca kompanije.">
                 <div class="referencaTekst">
                     Gold Mignon je preduzeće za trgovinu i usluge.
                 </div>
@@ -63,7 +78,7 @@
 
         <a href="#">
             <div class="referenca">
-                <img src="ref4.jpg" alt="Referenca kompanije.">
+                <img src="slike/ref4.jpg" alt="Referenca kompanije.">
                 <div class="referencaTekst">
                     Metalka Trade je preduzeće za trgovinu i usluge.
                 </div>
@@ -75,7 +90,7 @@
 
         <a href="#">
             <div class="referenca">
-                <img src="ref5.jpg" alt="Referenca kompanije.">
+                <img src="slike/ref5.jpg" alt="Referenca kompanije.">
                 <div class="referencaTekst">
                     ARSA je preduzeće za knjigovodstvene usluge.
                 </div>
@@ -103,5 +118,7 @@
         &copy; 2015 Milenijum-Soft d.o.o. Sarajevo
     </footer>
 </div>
+
+<script src="skripte/podmeni.js"></script>
 </body>
 </html>
