@@ -1,3 +1,4 @@
+/*
 $(document).ready(function() {
     $("#proizvodi").click(function () {
         if ($("#pomocniDiv").width() == 0) {
@@ -25,3 +26,21 @@ $(document).ready(function() {
     podmeni.style.left = (pozicijaProizvodi.left - 25) + "px";
     podmeni.style.top = pozicijaProizvodi.top + 40 + "px";
 });
+*/
+function proizvodi_Click() {
+    var pomeni = document.getElementById("podmeni");
+    if (podmeni.style.display == "block") pomeni.style.display = "none";
+    else podmeni.style.display = "block";
+
+    //Postavi poziciju menija
+    //var sakriveniDiv = document.getElementById("pomocniDiv");
+    //var sakriveniDivDva = document.getElementById("pomocniDivDva");
+    var proizvodi = document.getElementById("proizvodi");
+    var pozicijaProizvodi = proizvodi.getBoundingClientRect();
+    //sakriveniDiv.style.left = pozicijaProizvodi.left + 95 + "px";
+    //sakriveniDiv.style.top = pozicijaProizvodi.top + "px";
+    //sakriveniDivDva.style.left = pozicijaProizvodi.left + "px";
+    //sakriveniDivDva.style.top = pozicijaProizvodi.top + 35 + "px";
+    podmeni.style.left = (pozicijaProizvodi.left - 25) + "px";
+    podmeni.style.top = pozicijaProizvodi.top + 40 + "px";
+}

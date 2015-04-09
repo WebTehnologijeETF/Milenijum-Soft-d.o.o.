@@ -360,7 +360,7 @@ footer {
     margin: 5px;
     background-color: #0193B7;
     position: relative;
-    left: -20px;
+    left: -5px;
 }
 #podmeni > ul > li > a {
     text-decoration: none;
@@ -369,6 +369,7 @@ footer {
 #podmeni > ul > li:hover {
     background-color: #F04C40;
 }
+/*
 #pomocniDiv {
     background-color: #0193B7;
     height: 40px;
@@ -382,7 +383,7 @@ footer {
     position: absolute;
     display: none;
 }
-
+*/
 
 details summary {
     cursor: pointer;
