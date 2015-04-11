@@ -62,3 +62,17 @@ $(document).ready(function(){
         }
     });
 });
+
+$(function () {
+    $(":file").change(function () {
+        if (this.files && this.files[0]) {
+            var citac = new FileReader();
+            citac.onload = ucitanaSlika;
+            citac.readAsDataURL(this.files[0]);
+        }
+    });
+});
+
+function ucitanaSlika(e) {
+    $('#kontakt_slikaKorisnika').attr('src', e.target.result);
+};
