@@ -41,7 +41,7 @@
     </header>
     <main id="kontakt-main">
         <h2 class="podnaslov">Unesite podatke i kontaktirajte nas (* - obavezni podaci)</h2>
-        <form action="kontakt.php" method="post">
+        <form action="php/kontakti.php" method="post">
             <table id="kontakt-tabela">
                 <tr>
                     <td class="staviNaCentar" colspan="3">
@@ -61,7 +61,7 @@
                         Ime*:
                     </td>
                     <td>
-                        <input id="ime" name="ime" type="text">
+                        <input id="ime" name="ime" type="text" onblur="validirajIme()">
                     </td>
                     <td class="error" id="errorIme">
 
@@ -72,7 +72,7 @@
                         Mail*:
                     </td>
                     <td>
-                        <input id="mail" name="mail" type="email">
+                        <input id="mail" name="mail" type="email" onblur="validirajMail()">
                     </td>
                     <td class="error" id="errorMail">
 
@@ -105,7 +105,7 @@
                         Poruka*:
                     </td>
                     <td>
-                        <textarea id="poruka" name="poruka"></textarea>
+                        <textarea id="poruka" name="poruka" onblur="validirajPoruku()"></textarea>
                     </td>
                     <td class="error" id="errorPoruka">
                         Poruka ne smije ostati prazna.
