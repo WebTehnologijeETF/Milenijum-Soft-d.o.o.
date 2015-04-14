@@ -44,13 +44,13 @@
         <form action="kontakt.php" method="post">
             <table id="kontakt-tabela">
                 <tr>
-                    <td align="center" colspan="3">
+                    <td class="staviNaCentar" colspan="3">
                         <h3>Dodajte sliku:</h3>
                         <img src="slike/korisnik.png" id="kontakt_slikaKorisnika" alt="User image that can be uploaded">
                     </td>
                 </tr>
                 <tr>
-                    <td align="center" colspan="3">
+                    <td class="staviNaCentar" colspan="3">
                         <p>
                             <input type="file">
                         </p>
@@ -112,8 +112,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td>
+                    <td colspan="3">
                         <input id="posalji" type="button" value="Pošalji">
                     </td>
                 </tr>
@@ -134,7 +133,7 @@
     </footer>
 </div>
 
-<script language="javascript">
+<script>
     populateCountries("country", "state");
 </script>
 <script src="skripte/podmeni.js"></script>

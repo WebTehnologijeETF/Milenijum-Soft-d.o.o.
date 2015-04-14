@@ -267,6 +267,9 @@ footer {
 img#kontakt_slikaKorisnika {
     height: 200px;
 }
+td.staviNaCentar {
+    text-align: center;
+}
 
 
 #proizvodi-main {
