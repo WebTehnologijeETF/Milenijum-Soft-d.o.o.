@@ -241,7 +241,7 @@ footer {
 #poruka-tekst {
     vertical-align: top;
 }
-#ime, #mail, #state, #country {
+#ime, #mail, #state, #country, #srednjaSkola, #opcina { /*TODO: Staviti u klasu */
     width: 300px;
     border-radius: 5px;
 }
@@ -261,7 +261,7 @@ footer {
     margin-right: 30px;
 }
 .naziv {
-    width: 80px;
+    width: 100px;
     text-align: right;
 }
 img#kontakt_slikaKorisnika {
@@ -394,4 +394,39 @@ details summary {
 }
 li#proizvodi {
    cursor: pointer;
+}
+
+/***   Administracija proizvoda   ***/
+
+#proizvodiAdministracija-main {
+    float:left;
+    width: 720px;
+    margin-top: 50px;
+}
+
+table#tabelaProizvoda {
+    text-align: center;
+}
+
+div#tabelaProizvodaDiv, div#funkcije {
+    float: left;
+    padding: 20px;
+}
+
+div#promjena, div#brisanje {
+    display: none;
+}
+
+div#dodavanje, div#promjena, div#brisanje {
+    padding-top: 20px;
+}
+
+button#dodaj, button#promjeni, button#obrisi {
+    text-align: center;
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
 }

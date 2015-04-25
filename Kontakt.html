@@ -20,7 +20,7 @@
             <div id="pomocniDiv"></div>
             <div id="pomocniDivDva"></div>
             <ul id="meni">
-                <li><a href="index.html">Naslovna</a></li>
+                <li><a onclick="otvoriUrlAsinhrono('index.html')">Naslovna</a></li>
                 <li id="proizvodi" onclick="proizvodi_Click()"><a>Proizvodi</a></li>
                 <li>
                     <div id="podmeni">
@@ -33,9 +33,9 @@
                         </ul>
                     </div>
                 </li>
-                <li><a href="O%20nama.html">O nama</a></li>
-                <li><a href="Reference.html">Reference</a></li>
-                <li><a href="Kontakt.html">Kontakt</a> </li>
+                <li><a onclick="otvoriUrlAsinhrono('O%20nama.html')">O nama</a></li>
+                <li><a onclick="otvoriUrlAsinhrono('Reference.html')">Reference</a></li>
+                <li><a onclick="otvoriUrlAsinhrono('Kontakt.html')">Kontakt</a> </li>
             </ul>
         </nav>
     </header>
@@ -100,6 +100,29 @@
 
                     </td>
                 </tr>
+                <!--                       OPĆINA I SREDNJA SKOLA                     -->
+                <tr>
+                    <td class="naziv">
+                        Općina:
+                    </td>
+                    <td>
+                        <input id="opcina" type="text">
+                    </td>
+                    <td class="error" id="errorOpcina">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="naziv">
+                        Srednja škola:
+                    </td>
+                    <td>
+                        <input id="srednjaSkola" type="text">
+                    </td>
+                    <td class="error" id="errorSrednjaSkola">
+
+                    </td>
+                </tr>
                 <tr>
                     <td class="naziv" id="poruka-tekst">
                         Poruka*:
@@ -136,7 +159,8 @@
 <script>
     populateCountries("country", "state");
 </script>
-<script src="skripte/podmeni.js"></script>
+<script src="skripte/Podmeni.js"></script>
 <script src="skripte/KontaktForma.js"></script>
+<script src="skripte/otvoriUrlAsinhrono.js"></script>
 </body>
 </html>

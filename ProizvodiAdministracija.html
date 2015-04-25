@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head lang="ba">
+    <meta charset="UTF-8">
+    <title>Administracija Proizvoda</title>
+    <link href="ostalo/stil.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="slike/favicon.png">
+</head>
+<body>
+<div id="forma">
+    <header>
+        <a href="index.html">
+            <p id="logo">Milenijum-Soft<br><span id="slogan">Softver po mjeri korisnika</span></p>
+            <img id="logoSlika" src="slike/logo1.png" alt="Logo kompanije Milenijum-Soft. Softver po mjeri korisnika">
+        </a>
+        <nav>
+            <div id="pomocniDiv"></div>
+            <div id="pomocniDivDva"></div>
+            <ul id="meni">
+                <li><a href="index.html">Naslovna</a></li>
+                <li id="proizvodi" onclick="proizvodi_Click()"><a>Proizvodi</a></li>
+                <li>
+                    <div id="podmeni">
+                        <ul>
+                            <li><a href="Proizvodi.html">Finansijsko poslovanje</a></li>
+                            <li><a href="Proizvodi.html">Robno poslovanje</a></li>
+                            <li><a href="Proizvodi.html">Plate uposlenih</a></li>
+                            <li><a href="Proizvodi.html">Stalna sredstva</a></li>
+                            <li><a href="Proizvodi.html">Ostali proizvodi</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="O%20nama.html">O nama</a></li>
+                <li><a href="Reference.html">Reference</a></li>
+                <li><a href="Kontakt.html">Kontakt</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="proizvodiAdministracija-main">
+        <h2 class="podnaslov">Odaberite akciju i uredite proizvode</h2>
+        <div id="tabelaProizvodaDiv">
+            <table id="tabelaProizvoda"></table>
+        </div>
+
+        <div id="funkcije">
+            Odaberite akciju:
+            <select id="akcija" onchange="promjenaAkcije()">
+                <option>Dodavanje</option>
+                <option>Promjena</option>
+                <option>Brisanje</option>
+            </select>
+            <div id="dodavanje">
+                <table>
+                    <tr>
+                        <td>Naziv:</td>
+                        <td><input type="text" id="nazivDodavanje"></td>
+                    </tr>
+                    <tr>
+                        <td>Opis:</td>
+                        <td><input type="text" id="opisDodavanje"></td>
+                    </tr>
+                    <tr>
+                        <td>Slika:</td>
+                        <td><input type="text" id="slikaDodavanje"></td>
+                    </tr>
+                    <tr>
+                        <td>Url:</td>
+                        <td><input type="text" id="urlDodavanje"></td>
+                    </tr>
+                    <tr>
+                        <td>Cijena:</td>
+                        <td><input type="text" id="cijenaDodavanje"></td>
+                    </tr>
+                    <tr>
+                        <td>Dostupan:</td>
+                        <td><input type="checkbox" id="dostupnostDodavanje"></td>
+                    </tr>
+                </table>
+
+                <button id="dodaj" onclick="dodaj()">OK</button>
+                <span id="errorDodaj"></span>
+            </div>
+            <div id="promjena">
+                <table>
+                    <tr>
+                        <td>Naziv:</td>
+                        <td><select id="nazivPromjena" onchange="promjenaPromjene()"></select></td>
+                    </tr>
+                    <tr>
+                        <td>Opis:</td>
+                        <td><input type="text" id="opisPromjena"></td>
+                    </tr>
+                    <tr>
+                        <td>Slika:</td>
+                        <td><input type="text" id="slikaPromjena"></td>
+                    </tr>
+                    <tr>
+                        <td>Url:</td>
+                        <td><input type="text" id="urlPromjena"></td>
+                    </tr>
+                    <tr>
+                        <td>Cijena:</td>
+                        <td><input type="text" id="cijenaPromjena"></td>
+                    </tr>
+                    <tr>
+                        <td>Dostupan:</td>
+                        <td><input type="checkbox" id="dostupnostPromjena"></td>
+                    </tr>
+                </table>
+
+                <button id="promjeni" onclick="promjeni()">OK</button>
+                <span id="errorPromjeni"></span>
+            </div>
+            <div id="brisanje">
+                <table>
+                    <tr>
+                        <td>
+                            Naziv:
+                        </td>
+                        <td>
+                            <select id="nazivBrisanje"></select>
+                        </td>
+                    </tr>
+                </table>
+
+                <button id="obrisi" onclick="obrisi()">OK</button>
+                <span id="errorObrisi"></span>
+            </div>
+        </div>
+
+    </main>
+
+    <footer id="referenceFooter">
+        &copy; 2015 Milenijum-Soft d.o.o. Sarajevo
+    </footer>
+</div>
+
+<script src="skripte/Podmeni.js"></script>
+<script src="skripte/administracijaFunkcije.js"></script>
+</body>
+</html>
