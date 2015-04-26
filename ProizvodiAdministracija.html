@@ -75,6 +75,7 @@
                     <tr>
                         <td>Dostupan:</td>
                         <td><input type="checkbox" id="dostupnostDodavanje"></td>
+
                     </tr>
                 </table>
 
@@ -84,8 +85,12 @@
             <div id="promjena">
                 <table>
                     <tr>
+                        <td>Id:</td>
+                        <td><select id="idPromjena" onchange="promjenaPromjene()"></select></td>
+                    </tr>
+                    <tr>
                         <td>Naziv:</td>
-                        <td><select id="nazivPromjena" onchange="promjenaPromjene()"></select></td>
+                        <td><input type="text" id="nazivPromjena"></td>
                     </tr>
                     <tr>
                         <td>Opis:</td>
@@ -116,10 +121,10 @@
                 <table>
                     <tr>
                         <td>
-                            Naziv:
+                            Id:
                         </td>
                         <td>
-                            <select id="nazivBrisanje"></select>
+                            <select id="idBrisanje"></select>
                         </td>
                     </tr>
                 </table>

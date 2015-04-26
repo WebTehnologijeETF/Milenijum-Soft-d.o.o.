@@ -408,6 +408,11 @@ table#tabelaProizvoda {
     text-align: center;
 }
 
+div#tabelaProizvodaDiv {
+    max-height: 800px;
+    overflow: scroll;
+}
+
 div#tabelaProizvodaDiv, div#funkcije {
     float: left;
     padding: 20px;

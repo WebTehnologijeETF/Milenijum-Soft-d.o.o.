@@ -9,19 +9,21 @@ function osvjezi() {
     ajax.onreadystatechange = function() {
         if(ajax.readyState == 4 && ajax.status == 200) {
             var tekst = ajax.responseText;
-            studenti = JSON.parse(tekst);
+            proizvodi = JSON.parse(tekst);
 
-            var tabelaUnutrasnjost = "<tr><th>ID</th><th>Naziv</th><th>Opis</th><th>Slika</th><th>URL</th><th>Cijena</th><th>Dostupost</th></tr>";
+            sviID = [];
+            var tabelaUnutrasnjost = "<tr><th>Id</th><th>Naziv</th><th>Opis</th><th>Slika</th><th>URL</th><th>Cijena</th><th>Dostupost</th></tr>";
             var i;
             for (i=0; i<proizvodi.length; i++) {
+                var dostupan = proizvodi[i]["dostupnost"] == 1 ? "Da" : "Ne";
                 tabelaUnutrasnjost +=
                     "<tr> <td style='border: 1px solid black; border-radius: 5px; padding: 5px'>" + proizvodi[i]["id"] +
-                    "<tr> <td style='border: 1px solid black; border-radius: 5px; padding: 5px'>" + proizvodi[i]["Naziv"] +
-                    "</td><td style='border: 1px solid black; border-radius: 5px; padding: 5px'>" + proizvodi[i]["Opis"] +
-                    "</td><td style='border: 1px solid black; border-radius: 5px; padding: 5px'>" + proizvodi[i]["Slika"] +
-                    "</td><td style='border: 1px solid black; border-radius: 5px; padding: 5px'>" + proizvodi[i]["Url"] +
-                    "</td><td style='border: 1px solid black; border-radius: 5px; padding: 5px'>" + proizvodi[i]["Cijena"] +
-                    "</td><td style='border: 1px solid black; border-radius: 5px; padding: 5px'>" + proizvodi[i]["Dostupnost"] + "</tr>";
+                    "</td><td style='border: 1px solid black; border-radius: 5px; padding: 5px'>" + proizvodi[i]["naziv"] +
+                    "</td><td style='border: 1px solid black; border-radius: 5px; padding: 5px'><div style='max-width: 100px; max-height: 200px; overflow: hidden;'>" + proizvodi[i]["opis"] + "</div>" +
+                    "</td><td style='border: 1px solid black; border-radius: 5px; padding: 5px'><img width=200 src='" + proizvodi[i]["slika"] + "'>" +
+                    "</td><td style='border: 1px solid black; border-radius: 5px; padding: 5px'><a target='_blank' href='" + proizvodi[i]["url"] + "'>Link</a>" +
+                    "</td><td style='border: 1px solid black; border-radius: 5px; padding: 5px'>" + proizvodi[i]["cijena"] +
+                    "</td><td style='border: 1px solid black; border-radius: 5px; padding: 5px'>" + dostupan + "</tr>";
                 sviID.push(proizvodi[i]["id"]);
             }
             tabela.innerHTML = tabelaUnutrasnjost;
@@ -31,13 +33,19 @@ function osvjezi() {
             var _idBrisanje = document.getElementById("idBrisanje");
             var _idPromjena = document.getElementById("idPromjena");
 
-            _idBrisanje.innerHTML = " ";
-            _idPromjena.innerHTML = " ";
+            for(i=_idBrisanje.options.length-1;i>=0;i--)
+            {
+                _idBrisanje.remove(i);
+                _idPromjena.remove(i);
+            }
 
-            var i;
-            for (i=0; i<sviNazivi.length; i++) {
-                _idBrisanje.innerHTML += "<option>" + sviID[i] + "</option>";
-                _idPromjena.innerHTML += "<option>" + sviID[i] + "</option>";
+            for (i=0; i<sviID.length; i++) {
+                var opcija1 = document.createElement("option");
+                opcija1.text = sviID[i].toString();
+                _idBrisanje.add(opcija1);
+                var opcija2 = document.createElement("option");
+                opcija2.text = sviID[i].toString();
+                _idPromjena.add(opcija2);
             }
         }
     }
@@ -78,17 +86,17 @@ function promjenaPromjene() {
     var _cijena = document.getElementById("cijenaPromjena");
     var _dostupnost = document.getElementById("dostupnostPromjena");
 
-    var naziv = document.getElementById("nazivPromjena").options[document.getElementById("nazivPromjena").selectedIndex].text;
+    var _id = document.getElementById("idPromjena").options[document.getElementById("idPromjena").selectedIndex].text;
 
     var i;
     for(i=0; i<proizvodi.length; i++) {
-        if ( naziv == proizvodi[i]["naziv"]) {
+        if ( _id == proizvodi[i]["id"]) {
             _naziv.value = proizvodi[i]["naziv"];
             _opis.value = proizvodi[i]["opis"];
             _slika.value = proizvodi[i]["slika"];
             _url.value = proizvodi[i]["url"];
             _cijena.value = proizvodi[i]["cijena"];
-            _dostupnost.value = proizvodi[i]["dostupnost"];
+            _dostupnost.checked = (proizvodi[i]["dostupnost"] == 1);
             break;
         }
     }
@@ -102,14 +110,18 @@ function dodaj() {
     var _cijena = document.getElementById("cijenaDodavanje");
     var _dostupnost = document.getElementById("dostupnostDodavanje");
 
+    if (parseFloat(_cijena.value) < 0) {
+        document.getElementById("errorDodaj").innerHTML = "Cijena ne smije biti manja od nule.";
+        return;
+    }
+
     var proizvod = {
-        id: 1,
         naziv: _naziv.value,
         opis: _opis.value,
         slika: _slika.value,
         url: _url.value,
         cijena: _cijena.value,
-        dostupnost: (_dostupnost.value == "on")
+        dostupnost: _dostupnost.checked
     }
 
     var ajax = new XMLHttpRequest();
@@ -123,7 +135,7 @@ function dodaj() {
             document.getElementById("slikaPromjena").value = "";
             document.getElementById("urlPromjena").value = "";
             document.getElementById("cijenaPromjena").value = "";
-            document.getElementById("dostupnostPromjena").value = false;
+            document.getElementById("dostupnostPromjena").checked = false;
         }
         else if (ajax.status == 400 && ajax.readyState == 4) {
             alert("Neispravni podaci");
@@ -140,7 +152,8 @@ function dodaj() {
 function obrisi() {
 
     var proizvod = {
-        naziv: document.getElementById("nazivBrisanje").options[document.getElementById("nazivBrisanje").selectedIndex].text,
+        id: parseInt(document.getElementById("idBrisanje").options[document.getElementById("idBrisanje").selectedIndex].text),
+        naziv: "",
         opis: "",
         slika: "",
         url: "",
@@ -162,21 +175,27 @@ function obrisi() {
             alert("Nepostojeći proizvod");
         }
     }
-    ajax.open("POST", "http://zamger.etf.unsa.ba/wt/proizvodi.php", true);
+    ajax.open("POST", "http://zamger.etf.unsa.ba/wt/proizvodi.php?brindexa=16267", true);
     ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-    ajax.send ("akcija=brisanje&brindexa=16267&proizvod=" + JSON.stringify(proizvod));
+    ajax.send ("akcija=brisanje&proizvod=" + JSON.stringify(proizvod));
 }
 
 function promjeni() {
     var _naziv = document.getElementById("nazivPromjena").value;
     var _opis = document.getElementById("opisPromjena").value;
     var _slika = document.getElementById("slikaPromjena").value;
-    var _url = parseInt(document.getElementById("urlPromjena").value);
-    var _cijena = parseInt(document.getElementById("cijenaPromjena").value);
-    var _dostupnost = parseInt(document.getElementById("dostupnostPromjena").value);
+    var _url = document.getElementById("urlPromjena").value;
+    var _cijena = parseFloat(document.getElementById("cijenaPromjena").value);
+    var _dostupnost = (document.getElementById("dostupnostPromjena").checked ? 1 : 0);
 
-    var student = {
-        naziv: document.getElementById("nazivPromjena").options[document.getElementById("nazivPromjena").selectedIndex].text,
+    if (parseFloat(_cijena.value) < 0) {
+        document.getElementById("errorDodaj").innerHTML = "Cijena ne smije biti manja od nule.";
+        return;
+    }
+
+    var proizvod = {
+        id: parseInt(document.getElementById("idPromjena").options[document.getElementById("idPromjena").selectedIndex].text),
+        naziv: _naziv,
         opis: _opis,
         slika: _slika,
         url: _url,
@@ -195,7 +214,7 @@ function promjeni() {
             document.getElementById("slikaPromjena").value = "";
             document.getElementById("urlPromjena").value = "";
             document.getElementById("cijenaPromjena").value = "";
-            document.getElementById("dostupnostPromjena").value = false;
+            document.getElementById("dostupnostPromjena").checked = false;
         }
         else if (ajax.status == 400 && ajax.readyState == 4) {
             alert("Neispravni podaci");
