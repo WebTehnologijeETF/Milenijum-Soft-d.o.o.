@@ -53,7 +53,19 @@ function osvjezi() {
     ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     ajax.send ();
 }
-onload = osvjezi();
+onload = function() {
+    osvjezi();
+    var pozicija = document.getElementById("proizvodi").getBoundingClientRect();
+    document.getElementById("proizvodiPodmeni").style.left = pozicija.left - 33 + "px";
+}
+
+function proizvodiEnter() {
+    document.getElementById("proizvodiPodmeni").style.display = "block";
+}
+
+function proizvodiLeave() {
+    document.getElementById("proizvodiPodmeni").style.display = "none";
+}
 
 function promjenaAkcije() {
     var akcija = document.getElementById("akcija").value;

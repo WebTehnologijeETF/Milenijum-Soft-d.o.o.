@@ -11,30 +11,26 @@
 <body>
 <div id="forma">
     <header>
-        <a href="index.html">
+        <a onclick="otvoriUrlAsinhrono('index.html')">
             <p id="logo">Milenijum-Soft<br><span id="slogan">Softver po mjeri korisnika</span></p>
             <img id="logoSlika" src="slike/logo1.png" alt="Logo kompanije Milenijum-Soft. Softver po mjeri korisnika">
         </a>
         <nav>
-            <div id="pomocniDiv"></div>
-            <div id="pomocniDivDva"></div>
             <ul id="meni">
-                <li><a href="index.html">Naslovna</a></li>
-                <li id="proizvodi" onclick="proizvodi_Click()"><a>Proizvodi</a></li>
-                <li>
-                    <div id="podmeni">
-                        <ul>
-                            <li><a href="Proizvodi.html">Finansijsko poslovanje</a></li>
-                            <li><a href="Proizvodi.html">Robno poslovanje</a></li>
-                            <li><a href="Proizvodi.html">Plate uposlenih</a></li>
-                            <li><a href="Proizvodi.html">Stalna sredstva</a></li>
-                            <li><a href="Proizvodi.html">Ostali proizvodi</a></li>
-                        </ul>
-                    </div>
+                <li><a onclick="otvoriUrlAsinhrono('index.html')">Naslovna</a></li>
+                <li id="proizvodi" onmouseover="proizvodiEnter()" onmouseout="proizvodiLeave()"><a>Proizvodi</a>
+                    <ul id="proizvodiPodmeni">
+                        <li><a onclick="otvoriUrlAsinhrono('Proizvodi.html')">Finansijsko poslovanje</a></li>
+                        <li><a onclick="otvoriUrlAsinhrono('Proizvodi.html')">Robno poslovanje</a></li>
+                        <li><a onclick="otvoriUrlAsinhrono('Proizvodi.html')">Plate uposlenih</a></li>
+                        <li><a onclick="otvoriUrlAsinhrono('Proizvodi.html')">Stalna sredstva</a></li>
+                        <li><a onclick="otvoriUrlAsinhrono('Proizvodi.html')">Ostali proizvodi</a></li>
+                        <li><a onclick="otvoriUrlAsinhrono('ProizvodiAdministracija.html')">Administriraj</a></li>
+                    </ul>
                 </li>
-                <li><a href="O%20nama.html">O nama</a></li>
-                <li><a href="Reference.html">Reference</a></li>
-                <li><a href="Kontakt.html">Kontakt</a> </li>
+                <li><a onclick="otvoriUrlAsinhrono('O%20nama.html')">O nama</a></li>
+                <li><a onclick="otvoriUrlAsinhrono('Proizvodi.html')">Reference</a></li>
+                <li><a onclick="otvoriUrlAsinhrono('Kontakt.html')">Kontakt</a> </li>
             </ul>
         </nav>
     </header>
@@ -107,5 +103,6 @@
 </div>
 
 <script src="skripte/Podmeni.js"></script>
+<script src="skripte/otvoriUrlAsinhrono.js"></script>
 </body>
 </html>

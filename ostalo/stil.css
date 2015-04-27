@@ -17,6 +17,7 @@ header {
     font-size: 17pt;
     position: relative;
     top: 40px;
+    cursor: pointer;
 }
 #slogan {
     font-size: 10pt;
@@ -24,6 +25,7 @@ header {
     width: 210px;
     position: relative;
     left: -5px;
+    cursor: pointer;
 }
 #logoSlika {
     width: 100px;
@@ -32,6 +34,7 @@ header {
     position: relative;
     left: -150px;
     top: 20px;
+    cursor: pointer;
 }
 #slide {
     margin-top: 40px;
@@ -54,6 +57,7 @@ header {
     border-top-width: 5px;
     border-color: #0193B7;
     border-top-style: solid;
+    cursor: pointer;
 }
 #meni > li > a:hover {
     color: white;
@@ -426,12 +430,60 @@ div#dodavanje, div#promjena, div#brisanje {
     padding-top: 20px;
 }
 
+@keyframes animacija {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+
+@-webkit-keyframes animacija {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+
 button#dodaj, button#promjeni, button#obrisi {
     text-align: center;
     margin-top: 20px;
     width: 100px;
     height: 30px;
     border-radius: 10px;
-    background-color: blue;
+    background-color: #0193B7;
+    transition: background-color 1s;
     color: white;
+}
+
+button#dodaj:hover, button#promjeni:hover, button#obrisi:hover {
+    -webkit-animation-name: animacija; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 6s; /* Chrome, Safari, Opera */
+    animation-name: animacija;
+    animation-duration: 6s;
+}
+
+/***   Podmeni Proizvodi verzija 2   ***/
+ul#proizvodiPodmeni li a {
+    text-decoration: none;
+    color: white;
+}
+
+ul#proizvodiPodmeni li {
+    background-color: #0193B7;
+    height: 20px;
+    width: 150px;
+    padding: 10px;
+    border-bottom: 2px solid #F04C40;
+    transition: background-color 2s;
+}
+
+ul#proizvodiPodmeni li:hover {
+    background-color: #F04C40;
+}
+
+ul#proizvodiPodmeni {
+    position: absolute;
+    list-style: none;
+    display: none;
+    transition: display 2s;
 }
