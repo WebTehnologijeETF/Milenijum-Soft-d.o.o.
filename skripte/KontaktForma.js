@@ -1,25 +1,27 @@
 var sveValidno = true;
 var ispravanMail = true;
 
+
+function validirajSve() {
+    sveValidno = true;
+
+    validirajIme();
+    ispravanMail = true;
+    validirajMail();
+    validirajPonovniMail();
+    validirajPoruku();
+    validirajOpcinu();
+    validirajSrednjuSkolu();
+
+    if (true == sveValidno) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
 $(document).ready(function(){
-    $("#posalji").click(function(){
-        sveValidno = true;
-
-        validirajIme();
-        ispravanMail = true;
-        validirajMail();
-        validirajPonovniMail();
-        validirajPoruku();
-        validirajOpcinu();
-        validirajSrednjuSkolu();
-
-        var posalji = document.getElementById("posalji");
-
-        if (true == sveValidno) {
-            posalji.type = "submit";
-        }
-    });
-
     $(function () {
         $(":file").change(function () {
             if (this.files && this.files[0]) {

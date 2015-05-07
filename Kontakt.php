@@ -14,7 +14,7 @@
     <?php include("dijelovi/header.php"); ?>
     <main id="kontakt-main">
         <h2 class="podnaslov">Unesite podatke i kontaktirajte nas (* - obavezni podaci)</h2>
-        <form action="php/kontakti.php" method="post">
+        <form action="servisi/kontakti.php" method="post" onsubmit="return validirajSve();">
             <table id="kontakt-tabela">
                 <tr>
                     <td class="staviNaCentar" colspan="3">
@@ -25,7 +25,7 @@
                 <tr>
                     <td class="staviNaCentar" colspan="3">
                         <p>
-                            <input type="file">
+                            <input name="slika" type="file">
                         </p>
                     </td>
                 </tr>
@@ -56,7 +56,7 @@
                         Ponovite mail*:
                     </td>
                     <td>
-                        <input id="ponovniMail" name="ponovniMail" type="email" onblur="validirajPonovniMail()">
+                        <input id="ponovniMail" type="email" onblur="validirajPonovniMail()">
                     </td>
                     <td class="error" id="errorPonovniMail">
 
@@ -90,9 +90,9 @@
                         Općina:
                     </td>
                     <td>
-                        <input id="opcina" type="text">
+                        <input id="opcina" name="opcina" type="text" onblur="validirajOpcinu()">
                     </td>
-                    <td class="error" id="errorOpcina" onblur="validirajOpcinu()">
+                    <td class="error" id="errorOpcina">
 
                     </td>
                 </tr>
@@ -101,7 +101,7 @@
                         Srednja škola:
                     </td>
                     <td>
-                        <input id="srednjaSkola" type="text" onblur="validirajSrednjuSkolu()">
+                        <input id="srednjaSkola" name="srednjaSkola" type="text" onblur="validirajSrednjuSkolu()">
                     </td>
                     <td class="error" id="errorSrednjaSkola">
 
@@ -120,7 +120,7 @@
                 </tr>
                 <tr>
                     <td colspan="3">
-                        <input id="posalji" type="button" value="Pošalji">
+                        <input id="posalji" type="submit" value="Pošalji">
                     </td>
                 </tr>
             </table>

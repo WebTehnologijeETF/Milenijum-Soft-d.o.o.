@@ -17,7 +17,7 @@
                 </ul>
             </li>
             <li><a onclick="otvoriUrlAsinhrono('O%20nama.php')">O nama</a></li>
-            <li><a onclick="otvoriUrlAsinhrono('Proizvodi.php')">Reference</a></li>
+            <li><a onclick="otvoriUrlAsinhrono('Reference.php')">Reference</a></li>
             <li><a onclick="otvoriUrlAsinhrono('Kontakt.php')">Kontakt</a> </li>
         </ul>
     </nav>
