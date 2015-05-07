@@ -15,3 +15,6 @@ Spirala druga napomene:
 Spirala treća napomene:
 - servis koji sam koristio je srednja_skola.php
 - servis /wt/proizvodi.php je iskorišten na stranici kojoj se može pristupiti preko Proizvodi -> Administracija
+
+Cetvrta spirala napomene:
+- promjene su uradjene na cijelom projektu, ali samo u vidu smanjivanja ponavljanja koda koristeći php skriptu header.php (u folderu dijelovi)
