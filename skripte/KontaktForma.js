@@ -1,11 +1,14 @@
 var sveValidno = true;
+var ispravanMail = true;
 
 $(document).ready(function(){
     $("#posalji").click(function(){
         sveValidno = true;
 
         validirajIme();
+        ispravanMail = true;
         validirajMail();
+        validirajPonovniMail();
         validirajPoruku();
         validirajOpcinu();
         validirajSrednjuSkolu();
@@ -63,16 +66,42 @@ function validirajMail() {
         document.getElementById("errorMail").style.display="block";
         document.getElementById("errorMail").innerHTML="Mail ne smije ostati prazan.";
         sveValidno = false;
+        ispravanMail = false;
     }
     else if (!mail.value.match(/^[a-z0-9_]+@[a-z.]+\.[a-z][a-z]+$/)) {
         mail.style.backgroundColor="red";
         document.getElementById("errorMail").style.display="block";
         document.getElementById("errorMail").innerHTML="Mail mora biti u tacnom formatu.";
         sveValidno = false;
+        ispravanMail = false;
     }
     else {
         mail.style.backgroundColor="lightgreen";
         document.getElementById("errorMail").style.display="none";
+    }
+}
+
+// Cross validacija
+function validirajPonovniMail() {
+    var ponovniMail = document.getElementById("ponovniMail");
+    var mail = document.getElementById("mail");
+
+    // Validacija ponovnig maila
+    if (mail.value != ponovniMail.value) {
+        ponovniMail.style.backgroundColor="red";
+        document.getElementById("errorPonovniMail").style.display="block";
+        document.getElementById("errorPonovniMail").innerHTML="Mail i ponovni mail nisu isti.";
+        sveValidno = false;
+    }
+    else if(ispravanMail == false) {
+        ponovniMail.style.backgroundColor="red";
+        document.getElementById("errorPonovniMail").style.display="block";
+        document.getElementById("errorPonovniMail").innerHTML="Mail nije dobro unesen.";
+        sveValidno = false;
+    }
+    else {
+        ponovniMail.style.backgroundColor="lightgreen";
+        document.getElementById("errorPonovniMail").style.display="none";
     }
 }
 

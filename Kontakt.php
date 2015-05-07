@@ -11,30 +11,7 @@
 </head>
 <body>
 <div id="forma">
-    <header>
-        <a onclick="otvoriUrlAsinhrono('index.html')">
-            <p id="logo">Milenijum-Soft<br><span id="slogan">Softver po mjeri korisnika</span></p>
-            <img id="logoSlika" src="slike/logo1.png" alt="Logo kompanije Milenijum-Soft. Softver po mjeri korisnika">
-        </a>
-        <nav>
-            <ul id="meni">
-                <li><a onclick="otvoriUrlAsinhrono('index.html')">Naslovna</a></li>
-                <li id="proizvodi" onmouseover="proizvodiEnter()" onmouseout="proizvodiLeave()"><a>Proizvodi</a>
-                    <ul id="proizvodiPodmeni">
-                        <li><a onclick="otvoriUrlAsinhrono('Proizvodi.html')">Finansijsko poslovanje</a></li>
-                        <li><a onclick="otvoriUrlAsinhrono('Proizvodi.html')">Robno poslovanje</a></li>
-                        <li><a onclick="otvoriUrlAsinhrono('Proizvodi.html')">Plate uposlenih</a></li>
-                        <li><a onclick="otvoriUrlAsinhrono('Proizvodi.html')">Stalna sredstva</a></li>
-                        <li><a onclick="otvoriUrlAsinhrono('Proizvodi.html')">Ostali proizvodi</a></li>
-                        <li><a onclick="otvoriUrlAsinhrono('ProizvodiAdministracija.html')">Administriraj</a></li>
-                    </ul>
-                </li>
-                <li><a onclick="otvoriUrlAsinhrono('O%20nama.html')">O nama</a></li>
-                <li><a onclick="otvoriUrlAsinhrono('Proizvodi.html')">Reference</a></li>
-                <li><a onclick="otvoriUrlAsinhrono('Kontakt.html')">Kontakt</a> </li>
-            </ul>
-        </nav>
-    </header>
+    <?php include("dijelovi/header.php"); ?>
     <main id="kontakt-main">
         <h2 class="podnaslov">Unesite podatke i kontaktirajte nas (* - obavezni podaci)</h2>
         <form action="php/kontakti.php" method="post">
@@ -71,6 +48,17 @@
                         <input id="mail" name="mail" type="email" onblur="validirajMail()">
                     </td>
                     <td class="error" id="errorMail">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="naziv">
+                        Ponovite mail*:
+                    </td>
+                    <td>
+                        <input id="ponovniMail" name="ponovniMail" type="email" onblur="validirajPonovniMail()">
+                    </td>
+                    <td class="error" id="errorPonovniMail">
 
                     </td>
                 </tr>

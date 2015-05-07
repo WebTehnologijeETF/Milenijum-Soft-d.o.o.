@@ -79,19 +79,20 @@ body {
 .novost > img {
     float: right;
     width: 380px;
-    height: 150px;
-    min-height: 150px;
 }
 .novostiTekst {
     width: 280px;
-    height: 130px;
     float: left;
     word-wrap: break-word;
-    max-width: 300px;
-    overflow: hidden;
     padding-left: 15px;
 }
-.novostiTekst > h3 {
+.novostiTekstBezSlike {
+    width: 680px;
+    float: left;
+    word-wrap: break-word;
+    padding-left: 15px;
+}
+.novostiTekst > h3, .novostiTekstBezSlike > h3 {
     position: relative;
     top: -30px;
 }
@@ -141,7 +142,7 @@ body {
 .novost:last-of-type .zlato {
     height: 0;
 }
-.novostiTekst > p {
+.maliParagraf {
     font-size: 12px;
 }
 footer {
@@ -245,7 +246,7 @@ footer {
 #poruka-tekst {
     vertical-align: top;
 }
-#ime, #mail, #state, #country, #srednjaSkola, #opcina { /*TODO: Staviti u klasu */
+#ime, #mail, #state, #country, #srednjaSkola, #opcina, #ponovniMail { /*TODO: Staviti u klasu */
     width: 300px;
     border-radius: 5px;
 }
@@ -265,7 +266,7 @@ footer {
     margin-right: 30px;
 }
 .naziv {
-    width: 100px;
+    width: 110px;
     text-align: right;
 }
 img#kontakt_slikaKorisnika {
@@ -377,21 +378,6 @@ td.staviNaCentar {
 #podmeni > ul > li:hover {
     background-color: #F04C40;
 }
-/*
-#pomocniDiv {
-    background-color: #0193B7;
-    height: 40px;
-    width: 0;
-    position: absolute;
-}
-#pomocniDivDva {
-    background-color: #0193B7;
-    height: 5px;
-    width: 95px;
-    position: absolute;
-    display: none;
-}
-*/
 
 details summary {
     cursor: pointer;
@@ -437,7 +423,7 @@ div#dodavanje, div#promjena, div#brisanje {
     100% {background-color: green;}
 }
 
-@-webkit-keyframes animacija {
+@-webkit-keyframes animacija { /* Chrome, Safari i Opera */
     0%   {background-color: red;}
     25%  {background-color: yellow;}
     50%  {background-color: blue;}
