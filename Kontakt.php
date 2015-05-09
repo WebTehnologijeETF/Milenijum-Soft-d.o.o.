@@ -13,8 +13,16 @@
 <div id="forma">
     <?php include("dijelovi/header.php"); ?>
     <main id="kontakt-main">
+
+        <?php include('servisi/serverSideValidacija.php'); ?>
+
+        <?php if(isset($_POST['ime']) && isset($_POST['mail']) && isset($_POST['ponovniMail']) && isset($_POST['poruka']) && ($_POST['ime']) && validirajMail($_POST['mail']) && validirajPonovniMail($_POST['mail'], $_POST['ponovniMail']) && validirajPoruku($_POST['poruka'])) : ?>
+            <?php include("dijelovi/potvrdaSlanja.php"); ?>
+
+        <?php else : ?>
+
         <h2 class="podnaslov">Unesite podatke i kontaktirajte nas (* - obavezni podaci)</h2>
-        <form action="servisi/kontakti.php" method="post" onsubmit="return validirajSve();">
+        <form action="Kontakt.php" method="post" onsubmit="return validirajSve();">
             <table id="kontakt-tabela">
                 <tr>
                     <td class="staviNaCentar" colspan="3">
@@ -34,10 +42,10 @@
                         Ime*:
                     </td>
                     <td>
-                        <input id="ime" name="ime" type="text" onblur="validirajIme()">
+                        <input <?php if(isset($_POST['ime'])){ if(validirajIme($_POST['ime'])) echo "class='ispravnoPolje'"; else echo "class='neispravnoPolje'";} ?> id="ime" name="ime" type="text" onblur="validirajIme()" value="<?php if(isset($_REQUEST['ime'])) echo $_REQUEST['ime']; else echo ""; ?>">
                     </td>
-                    <td class="error" id="errorIme">
-
+                    <td class="error" id="errorIme" <?php if(isset($_POST['ime'])){ if(validirajIme($_POST['ime'])) echo ""; else echo "style='display: block'";} ?>>
+                        Pogrešnon uneseno ime.
                     </td>
                 </tr>
                 <tr>
@@ -45,10 +53,10 @@
                         Mail*:
                     </td>
                     <td>
-                        <input id="mail" name="mail" type="email" onblur="validirajMail()">
+                        <input <?php if(isset($_POST['mail'])){ if(validirajMail($_POST['mail'])) echo "class='ispravnoPolje'"; else echo "class='neispravnoPolje'";} ?> id="mail" name="mail" type="email" onblur="validirajMail()" value="<?php if(isset($_REQUEST['mail'])) echo $_REQUEST['mail']; else echo ""; ?>">
                     </td>
-                    <td class="error" id="errorMail">
-
+                    <td class="error" id="errorMail" <?php if(isset($_POST['mail'])){ if(validirajMail($_POST['mail'])) echo ""; else echo "style='display: block'";} ?>>
+                        Pogrešno unesen mail.
                     </td>
                 </tr>
                 <tr>
@@ -56,10 +64,10 @@
                         Ponovite mail*:
                     </td>
                     <td>
-                        <input id="ponovniMail" type="email" onblur="validirajPonovniMail()">
+                        <input <?php if(isset($_POST['ponovniMail'])){ if(validirajPonovniMail($_POST['mail'], $_POST['ponovniMail'])) echo "class='ispravnoPolje'"; else echo "class='neispravnoPolje'";} ?> id="ponovniMail" name="ponovniMail" type="email" onblur="validirajPonovniMail()" value="<?php if(isset($_REQUEST['ponovniMail'])) echo $_REQUEST['ponovniMail']; else echo ""; ?>">
                     </td>
-                    <td class="error" id="errorPonovniMail">
-
+                    <td class="error" id="errorPonovniMail" <?php if(isset($_POST['ponovniMail'])){ if(validirajPonovniMail($_POST['mail'], $_POST['ponovniMail'])) echo ""; else echo "style='display: block'";} ?>>
+                        Mailovi nisu jednaki.
                     </td>
                 </tr>
                 <tr>
@@ -90,7 +98,7 @@
                         Općina:
                     </td>
                     <td>
-                        <input id="opcina" name="opcina" type="text" onblur="validirajOpcinu()">
+                        <input id="opcina" name="opcina" type="text" onblur="validirajOpcinu()" value="<?php if(isset($_REQUEST['opcina'])) echo $_REQUEST['opcina']; else echo ""; ?>">
                     </td>
                     <td class="error" id="errorOpcina">
 
@@ -101,7 +109,7 @@
                         Srednja škola:
                     </td>
                     <td>
-                        <input id="srednjaSkola" name="srednjaSkola" type="text" onblur="validirajSrednjuSkolu()">
+                        <input id="srednjaSkola" name="srednjaSkola" type="text" onblur="validirajSrednjuSkolu()" value="<?php if(isset($_REQUEST['srednjaSkola'])) echo $_REQUEST['srednjaSkola']; else echo ""; ?>">
                     </td>
                     <td class="error" id="errorSrednjaSkola">
 
@@ -112,9 +120,9 @@
                         Poruka*:
                     </td>
                     <td>
-                        <textarea id="poruka" name="poruka" onblur="validirajPoruku()"></textarea>
+                        <textarea <?php if(isset($_POST['poruka'])){ if(validirajPoruku($_POST['poruka'])) echo "class='ispravnoPolje'"; else echo "class='neispravnoPolje'";} ?> id="poruka" name="poruka" onblur="validirajPoruku()"><?php if(isset($_POST['poruka'])) echo $_POST['poruka']; else echo ""; ?></textarea>
                     </td>
-                    <td class="error" id="errorPoruka">
+                    <td class="error" id="errorPoruka" <?php if(isset($_POST['poruka'])){ if(validirajPoruku($_POST['poruka'])) echo ""; else echo "style='display: block'";} ?>>
                         Poruka ne smije ostati prazna.
                     </td>
                 </tr>
@@ -134,6 +142,9 @@
             <summary>Detalji o videu</summary>
             <p>Video možete pogledati i na youtube.com tako što pratite <a href="https://www.youtube.com/watch?v=2nztIcqZwoA">ovaj</a> link.</p>
         </details>
+
+        <?php endif; ?>
+
     </main>
     <footer id="referenceFooter">
         &copy; 2015 Milenijum-Soft d.o.o. Sarajevo

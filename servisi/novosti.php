@@ -64,7 +64,7 @@ for ($i=0; $i<count($sortiraneNovosti); $i++):
     <div class="<?php if($sadrzajFajla[3] == "\r\n") echo "novostiTekstBezSlike"; else echo "novostiTekst"; ?>">
         <p class="maliParagraf"><?=$sadrzajFajla[0]?><br>
         Autor: <?=$sadrzajFajla[1]?></p>
-        <a class="vise" style="cursor: pointer; visibility: <?php if($imaDetaljnije == true) print "visible"; else print "hidden"; ?>" onclick="otvoriUrlAsinhrono('novost.php?naslov=<?=urlencode(ucfirst(strtolower($sadrzajFajla[2])))?>&tekst=<?=urlencode($detaljnije)?>&opis=<?=urlencode($opis)?>&datum=<?=urlencode($sadrzajFajla[0])?>&autor=<?=urlencode($sadrzajFajla[1])?>&slika=<?=urlencode($sadrzajFajla[3])?>')">Detaljnije</a>
+        <a class="vise" style="cursor: pointer; visibility: <?php if($imaDetaljnije == true) print "visible"; else print "hidden"; ?>" onclick="otvoriUrlAsinhrono('NovostDetalji.php?naslov=<?=urlencode(ucfirst(strtolower($sadrzajFajla[2])))?>&tekst=<?=urlencode($detaljnije)?>&opis=<?=urlencode($opis)?>&datum=<?=urlencode($sadrzajFajla[0])?>&autor=<?=urlencode($sadrzajFajla[1])?>&slika=<?=urlencode($sadrzajFajla[3])?>')">Detaljnije</a>
         <h3><?=ucfirst(strtolower($sadrzajFajla[2]))?></h3>
         <p><?=$opis?></p>
     </div>

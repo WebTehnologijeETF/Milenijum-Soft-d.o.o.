@@ -473,3 +473,27 @@ ul#proizvodiPodmeni {
     display: none;
     transition: display 2s;
 }
+
+/*****     Kontakt forma, mjenjanje po klasama     *****/
+.ispravnoPolje {
+    background-color: lightgreen;
+}
+
+.neispravnoPolje {
+    background-color: red;
+}
+
+/*****     Ispis u kontaktima za provjeru     *****/
+div#prikazKontaktaLijevo {
+    float: left;
+    width: 100px;
+    padding-left: 100px;
+}
+div#prikazKontaktaLijevo p {
+    text-align: right;
+}
+div#prikazKontaktaDesno {
+    float: left;
+    width: 500px;
+    padding-left: 20px;
+}
