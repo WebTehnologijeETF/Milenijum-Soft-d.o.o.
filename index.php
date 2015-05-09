@@ -24,7 +24,7 @@
     </footer>
 </div>
 
-<script src="skripte/Podmeni.js"></script>
+<script type="text/javascript" src="skripte/Podmeni.js"></script>
 <script src="skripte/otvoriUrlAsinhrono.js"></script>
 </body>
 </html>
