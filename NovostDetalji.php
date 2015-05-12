@@ -12,15 +12,15 @@
 <div id="forma">
     <?php include("dijelovi/header.php"); ?>
     <main id="o-nama-main">
-        <h2 class="podnaslov"><?=$_GET['naslov']?></h2>
+        <h2 class="podnaslov"><?=htmlentities($_GET['naslov'])?></h2>
         <?php if($_GET['slika'] != "\r\n"): ?>
-            <img width="400" id="slika1" src="<?=$_GET['slika']?>" alt="Slika novosti">
+            <img width="400" id="slika1" src="<?=htmlentities($_GET['slika'])?>" alt="Slika novosti">
         <?php endif; ?>
-        <p><?=$_GET['datum']?><br>Autor: <?=$_GET['autor']?></p><br>
+        <p><?=htmlentities($_GET['datum'])?><br>Autor: <?=htmlentities($_GET['autor'])?></p><br>
         <h3>Opis novosti</h3>
-        <p><?=$_GET['opis']?></p><br>
+        <p><?=htmlentities($_GET['opis'])?></p><br>
         <h3>Detaljniji tekst novosti</h3>
-        <p><?=$_GET['tekst']?></p><br>
+        <p><?=htmlentities($_GET['tekst'])?></p><br>
     </main>
     <footer id = "referenceFooter">
         &copy; 2015 Milenijum-Soft d.o.o. Sarajevo

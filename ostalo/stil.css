@@ -225,7 +225,7 @@ footer {
     background-color: #0193B7;
     color: white;
 }
-#posalji {
+.posalji {
     background-color: #0193B7;
     width: 120px;
     height: 40px;
@@ -496,4 +496,9 @@ div#prikazKontaktaDesno {
     float: left;
     width: 500px;
     padding-left: 20px;
+}
+
+div#potvrdaSlanjaTekst {
+    width: 720px;
+    float: left;
 }

@@ -127,8 +127,11 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="3">
-                        <input id="posalji" type="submit" value="Pošalji">
+                    <td>
+                        <input class="posalji" type="submit" value="Pošalji">
+                    </td>
+                    <td colspan="2">
+                        <input class="posalji" type="reset" value="Poništi">
                     </td>
                 </tr>
             </table>

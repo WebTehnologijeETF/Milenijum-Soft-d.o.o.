@@ -18,3 +18,4 @@ Spirala treća napomene:
 
 Cetvrta spirala napomene:
 - promjene su uradjene na cijelom projektu, ali samo u vidu smanjivanja ponavljanja koda koristeći php skriptu header.php (u folderu dijelovi)
+- dodatne male promjene su uradjene kao ispravka bug-ova, a dodane su i nove funkcionalnost kako bi zadovoljio spiralu

@@ -26,6 +26,5 @@
 
 <script type="text/javascript" src="skripte/Podmeni.js"></script>
 <script src="skripte/otvoriUrlAsinhrono.js"></script>
-<?php include("servisi/posaljiMail.php"); ?>
 </body>
 </html>
