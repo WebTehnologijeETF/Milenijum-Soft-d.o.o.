@@ -29,6 +29,8 @@ $poruka = "Samo pozdravi \n Samo svima pozdravi. \n Pozdrav za hugu i male hugic
     <p><?=$poruka?></p>
 </div>
 
+<?php include("servisi/posaljiMail.php"); ?>
+
 <h3>Da li ste sigurni da želite poslati ove podatke?</h3>
 <form method="get" action="servisi/posaljiMail.php?ime=<?=urlencode($ime)?>&mail=<?=urlencode($mail)?>&drzava=<?=urlencode($drzava)?>&grad=<?=urlencode($grad)?>&opcina=<?=urlencode($opcina)?>&srednjaSkola=<?=urlencode($srednjaSkola)?>&poruka=<?=urlencode($poruka)?>">
     <input type="button" value="Siguran sam">

@@ -48,7 +48,8 @@ for ($i=0; $i<count($sortiraneNovosti); $i++):
     $imaDetaljnije = false;
 
     for ($j=4; $j<count($sadrzajFajla);$j++) {
-        if($sadrzajFajla[$j] == "--\r\n") {
+        echo "Sadrzaj reda: " ; $sadrzajFajla[$j]."<br>";
+        if($sadrzajFajla[$j] == "--\r\n" || (strpos($sadrzajFajla[$j], "--") && strlen($sadrzajFajla[$j]) == 3)) {
             $imaDetaljnije = true;
             continue;
         }
