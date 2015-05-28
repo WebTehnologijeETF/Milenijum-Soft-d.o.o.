@@ -502,3 +502,77 @@ div#potvrdaSlanjaTekst {
     width: 720px;
     float: left;
 }
+
+/***   Komentari css   ***/
+div.komentarWraper {
+    float: left;
+    margin-left: 10px;
+    border: 5px solid #0193B7;
+    border-radius: 10px;
+    padding: 3px;
+    max-height: 20px; 
+    overflow: hidden; 
+    -webkit-transition: max-height 2s ease-out;
+    transition: max-height 2s;
+}
+
+div.komentarWraper:hover { max-height: 400px; }
+
+div.komentarWraper span { position: relative; left: 25px; }
+
+div.komentarWraper textarea { width: 180px; height: 100px; max-width: 280px; max-height: 200px; }
+
+div.komentarWraper h5 { color: red; }
+
+input.inputKomentar { width: 180px; }
+
+input.ostaviKomentar { color: white; background-color: #0193B7; border: 2px solid #0193B7; position: relative; left: 35px; }
+
+input#loginAsAdmin { color: white; background-color: #0193B7; border: 2px solid #0193B7; }
+
+
+/***   Admin panel stilovi   ***/
+
+div#logiranjeForma { border: 5px solid #0193B7; width: 250px; margin-right: auto; margin-left: auto; padding: 15px; }
+
+input#username, input#password { width: 245px; }
+
+input#logirajSe { color: white; background-color: #0193B7; border: 2px solid #0193B7; font-size: 15px; }
+
+div#adminAkcije, div#adminIzborAkcije, div#adminPrikaz {
+    border: 5px solid #0193B7;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+textarea.ograniciVelicinu {
+    max-width: 400px;
+    max-height: 300px;
+}
+
+input.adminDugme { color: white; background-color: #0193B7; border: 2px solid #0193B7; font-size: 15px; cursor: pointer; }
+
+div.adminAkcijaNevidljiv { display: none; }
+
+div.adminAkcijaVidljiv { display: block; }
+
+table.tblAdminPrikaz { width: 690px; border-collapse: collapse; }
+
+table.tblAdminPrikaz tr th, table.tblAdminPrikaz tr td {
+    border: 1px solid #0193B7;
+    padding: 2px;
+}
+
+table.tblAdminPrikaz tr th {
+    background-color: transparent;
+    color: #F04C40;
+}
+
+.floatRight { float: right; }
+
+div#pomBord { min-width: 15px; border: 1px solid transparent; }
+
+form#loginDugme { float: right; }
+
+form#promjenaAdmina { margin: 100px 0 100px 200px; float: left; border: 5px solid #0193B7; border-radius: 10px; padding: 10px; }

@@ -115,5 +115,6 @@
 
 <script src="skripte/administracijaFunkcije.js"></script>
 <script src="skripte/otvoriUrlAsinhrono.js"></script>
+<script src="skripte/podmeni.js"></script>
 </body>
 </html>

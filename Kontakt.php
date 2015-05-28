@@ -157,7 +157,7 @@
 <script>
     populateCountries("country", "state");
 </script>
-<script src="skripte/Podmeni.js"></script>
+<script src="skripte/podmeni.js"></script>
 <script src="skripte/KontaktForma.js"></script>
 <script src="skripte/otvoriUrlAsinhrono.js"></script>
 </body>

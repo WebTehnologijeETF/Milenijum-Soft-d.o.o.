@@ -79,7 +79,7 @@
     </footer>
 </div>
 
-<script src="skripte/Podmeni.js"></script>
+<script src="skripte/podmeni.js"></script>
 <script src="skripte/otvoriUrlAsinhrono.js"></script>
 </body>
 </html>
