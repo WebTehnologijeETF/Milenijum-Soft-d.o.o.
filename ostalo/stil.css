@@ -576,3 +576,5 @@ div#pomBord { min-width: 15px; border: 1px solid transparent; }
 form#loginDugme { float: right; }
 
 form#promjenaAdmina { margin: 100px 0 100px 200px; float: left; border: 5px solid #0193B7; border-radius: 10px; padding: 10px; }
+
+#zab { margin: 100px auto 100px auto; width: 200px;}

@@ -49,7 +49,5 @@ else {
 </div>
 <div id=potvrdaSlanjaTekst>
     <h3>Da li ste sigurni da želite poslati ove podatke?</h3>
-    <form method="get" action="servisi/posaljiMail.php?ime=<?=urlencode($ime)?>&mail=<?=urlencode($mail)?>&drzava=<?=urlencode($drzava)?>&grad=<?=urlencode($grad)?>&opcina=<?=urlencode($opcina)?>&srednjaSkola=<?=urlencode($srednjaSkola)?>&poruka=<?=urlencode($poruka)?>">
-        <input type="submit" value="Siguran sam">
-    </form>
+    <a href="servisi/posaljiMail.php?ime=<?=urlencode($ime)?>&mail=<?=urlencode($mail)?>&drzava=<?=urlencode($drzava)?>&grad=<?=urlencode($grad)?>&opcina=<?=urlencode($opcina)?>&srednjaSkola=<?=urlencode($srednjaSkola)?>&poruka=<?=urlencode($poruka)?>"> Siguran sam </a>
 </div>

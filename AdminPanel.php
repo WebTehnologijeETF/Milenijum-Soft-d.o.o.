@@ -672,7 +672,8 @@
             <form method="post" action="AdminPanel.php">
                 <input id="username" name="username" type="text" placeholder="Username"><br><br>
                 <input id="password" name="password" type="password" placeholder="Password"><br><br>
-                <input id="logirajSe" type="submit" value="Logiraj se">
+                <input id="logirajSe" type="submit" value="Logiraj se"><br><br>
+                <a href="zaboravioSamPassword.php">Zaboravio sam password.</a>
                 <?php
                 if (isset($_POST['username']) && isset($_POST['password'])) {
                     $veza = new PDO("mysql:dbname=milenijumsoft;host=127.13.49.130;charset=utf8", "Faruk", "tajna");

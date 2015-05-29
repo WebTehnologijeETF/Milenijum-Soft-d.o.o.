@@ -23,3 +23,4 @@ Cetvrta spirala napomene:
 Peta spirala napomene:
 - modul za izmjenu administratora sam realizovao tako što svaki administrator može samo sebe mjenati (nema slisla da nekom drugom password promjeni)
 - ograničenje da uvijek postoji bar jedan administrator u sistemu sam realizovao tako što administrator ne može sebe obrisati
+- na stranici je postavljen jedan administrator, Username = admin i Password = adminadmin

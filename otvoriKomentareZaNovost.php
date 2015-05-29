@@ -14,7 +14,7 @@
 		<main id="o-nama-main">			
 			<h2 class="podnaslov">Odabrana novost</h2>
 			<?php
-				$veza = new PDO("mysql:dbname=milenijumsoft;host=localhost;charset=utf8", "Faruk", "tajna");
+				$veza = new PDO("mysql:dbname=milenijumsoft;host=127.13.49.130;charset=utf8", "Faruk", "tajna");
 				$veza -> exec("set names utf8");
 
 				$idVijesti = $_GET['id'];

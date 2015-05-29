@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
+-- version 4.0.10.10
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: May 28, 2015 at 06:52 PM
--- Server version: 5.6.17
--- PHP Version: 5.5.12
+-- Host: 127.13.49.130:3306
+-- Generation Time: May 29, 2015 at 02:00 AM
+-- Server version: 5.5.41
+-- PHP Version: 5.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -34,14 +34,14 @@ CREATE TABLE IF NOT EXISTS `admini` (
   `alias` varchar(40) COLLATE utf8_slovenian_ci NOT NULL,
   PRIMARY KEY (`idAdmina`),
   UNIQUE KEY `Username` (`username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `admini`
 --
 
 INSERT INTO `admini` (`idAdmina`, `username`, `password`, `mail`, `alias`) VALUES
-(1, 'faruk', '98b347ae0606d2d1bc2c4e19fe3f3db3', 'fljuca1@etf.unsa.ba', 'Fare');
+(2, 'admin', 'f6fdffe48c908deb0f4c3bd36c032e72', 'fljuca1@etf.unsa.ba', 'Neki alias');
 
 -- --------------------------------------------------------
 
@@ -58,14 +58,15 @@ CREATE TABLE IF NOT EXISTS `komentari` (
   `vrijemeObjave` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`idKomentari`),
   KEY `IndexIdNovosti` (`idNovosti`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=93 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=95 ;
 
 --
 -- Dumping data for table `komentari`
 --
 
 INSERT INTO `komentari` (`idKomentari`, `idNovosti`, `autor`, `mail`, `tekst`, `vrijemeObjave`) VALUES
-(92, 19, 'Faruk', 'fljuca1@etf.unsa.ba', 'Ovaj jelen je preljep.', '2015-05-28 16:49:38');
+(92, 19, 'Faruk', 'fljuca1@etf.unsa.ba', 'Ovaj jelen je preljep.', '2015-05-28 16:49:38'),
+(93, 20, 'Baha', 'sferizovic1@etf.unsa.ba', 'Ova stranica je super', '2015-05-28 20:51:17');
 
 -- --------------------------------------------------------
 
@@ -79,10 +80,10 @@ CREATE TABLE IF NOT EXISTS `novosti` (
   `tekst` text COLLATE utf8_slovenian_ci NOT NULL,
   `detaljnijiTekst` text COLLATE utf8_slovenian_ci,
   `autor` varchar(45) COLLATE utf8_slovenian_ci NOT NULL,
-  `datumObjave` timestamp NOT NULL,
+  `datumObjave` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `slika` text COLLATE utf8_slovenian_ci,
   PRIMARY KEY (`idNovosti`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=21 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=22 ;
 
 --
 -- Dumping data for table `novosti`
